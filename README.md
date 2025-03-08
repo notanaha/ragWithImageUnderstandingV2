@@ -6,7 +6,7 @@ Configuration
 1. Put your pdf files in PDF folder
 2. Run noteboooks staring 01 through 04
 3. Change directory to streamlit then run "streamlit run startPage.py"
-4. Use "ragWithImageDocs_singleImage_withGpt4Hint"
+4. Use "search_and_rag_then_ask_vision"
 <br>
 <br>
 <br>
