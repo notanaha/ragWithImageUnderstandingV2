@@ -9,3 +9,6 @@ azure-search
 ipython
 openai
 azure-storage-blob
+ipykernel
+pandas
+streamlit

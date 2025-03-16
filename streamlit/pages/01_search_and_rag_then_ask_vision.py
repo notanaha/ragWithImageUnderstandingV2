@@ -48,7 +48,7 @@ def main():
             #--------------------------------------#
             st.write("Retrieving answer from Search Index.")
             
-            answer_context = utils.search_index_semanticAndFallBack(query, client, aoai_embedding_model)
+            answer_context = utils.search_index(query, client, aoai_embedding_model)
 
             #--------------------------------------#
             # Retrieving answer from gpt-4o        #

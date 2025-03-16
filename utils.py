@@ -45,7 +45,7 @@ load_dotenv("env")
 def search_index(query, client, embedding_model):
 
     service_endpoint = os.environ["SEARCH_ENDPOINT"] 
-    index_name = os.environ["SEARCH_INDEX_NAME"]
+    index_name = os.environ["SEARCH_INDEX_NAME_2"]
     key = os.environ["SEARCH_KEY"]
  
     search_client = SearchClient(service_endpoint, index_name, AzureKeyCredential(key))
@@ -67,7 +67,7 @@ def search_index(query, client, embedding_model):
 def search_index_semanticAndFallBack(query, client, embedding_model):
 
     service_endpoint = os.environ["SEARCH_ENDPOINT"] 
-    index_name = os.environ["SEARCH_INDEX_NAME"]
+    index_name = os.environ["SEARCH_INDEX_NAME_2"]
     key = os.environ["SEARCH_KEY"]
  
     search_client = SearchClient(service_endpoint, index_name, AzureKeyCredential(key))
