@@ -1,0 +1,1110 @@
+あなたは与えられたフロー図を、省略せずに完全な mermaid script に書き替えるよう求められています。
+サンプルとして添付1 のフローを考えます。
+
+添付1 のフローの mermaid script はこうなります。
+
+```mermaid
+flowchart LR  
+    A[燃えないごみ<br>（定期収集）] --> B[資源化センターで破砕・選別]  
+    B --> C1[不燃物]  
+    C1 --②--> D1[埋立場]  
+    B --> C2[鉄]  
+    C2 --③--> D2[リサイクル]  
+    B --> C3[アルミ]  
+    C3 --④--> D2   
+```
+
+では添付2 の画像について、フローの mermaid script はどうなりますか？
+完全な全体のフローを記述してください。
+なお、ラベルのテキストは、OCR によれば次のようになります。
+
+```json
+{
+    "paragraphs": [
+        {
+            "spans": [
+                {
+                    "offset": 0,
+                    "length": 6
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        587,
+                        19,
+                        720,
+                        19,
+                        720,
+                        44,
+                        587,
+                        44
+                    ]
+                }
+            ],
+            "role": "pageHeader",
+            "content": "発電·熱供給"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 7,
+                    "length": 1
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        82,
+                        60,
+                        89,
+                        60,
+                        89,
+                        82,
+                        82,
+                        82
+                    ]
+                }
+            ],
+            "content": "そ"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 9,
+                    "length": 3
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        817,
+                        47,
+                        889,
+                        47,
+                        889,
+                        71,
+                        817,
+                        71
+                    ]
+                }
+            ],
+            "content": "焼却灰"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 13,
+                    "length": 26
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        59,
+                        86,
+                        112,
+                        88,
+                        111,
+                        121,
+                        58,
+                        120
+                    ]
+                }
+            ],
+            "content": "福興市本町体 素位啊! 燃えるごみ用 (大) 452"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 40,
+                    "length": 10
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        148,
+                        73,
+                        280,
+                        73,
+                        280,
+                        133,
+                        148,
+                        132
+                    ]
+                }
+            ],
+            "content": "定期収集 燃えるごみ"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 51,
+                    "length": 7
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        576,
+                        69,
+                        745,
+                        69,
+                        745,
+                        94,
+                        576,
+                        95
+                    ]
+                }
+            ],
+            "content": "焼却施設で焼却"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 59,
+                    "length": 5
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        655,
+                        126,
+                        762,
+                        120,
+                        764,
+                        149,
+                        656,
+                        154
+                    ]
+                }
+            ],
+            "content": "可燃物 1"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 65,
+                    "length": 3
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        1006,
+                        123,
+                        1031,
+                        123,
+                        1031,
+                        220,
+                        1005,
+                        220
+                    ]
+                }
+            ],
+            "content": "埋立場"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 69,
+                    "length": 1
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        80,
+                        146,
+                        90,
+                        147,
+                        89,
+                        157,
+                        80,
+                        156
+                    ]
+                }
+            ],
+            "content": "G"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 71,
+                    "length": 16
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        59,
+                        265,
+                        113,
+                        265,
+                        113,
+                        282,
+                        59,
+                        281
+                    ]
+                }
+            ],
+            "content": "福岡市長品(直) 燃えないごみ用"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 88,
+                    "length": 4
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        169,
+                        249,
+                        257,
+                        250,
+                        257,
+                        270,
+                        169,
+                        270
+                    ]
+                }
+            ],
+            "content": "定期収集"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 93,
+                    "length": 14
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        415,
+                        266,
+                        573,
+                        266,
+                        574,
+                        324,
+                        415,
+                        324
+                    ]
+                }
+            ],
+            "content": "資源化センター で破砕·選別"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 108,
+                    "length": 5
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        753,
+                        266,
+                        862,
+                        267,
+                        862,
+                        295,
+                        753,
+                        295
+                    ]
+                }
+            ],
+            "content": "不燃物 2"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 114,
+                    "length": 6
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        70,
+                        288,
+                        100,
+                        288,
+                        100,
+                        297,
+                        70,
+                        297
+                    ]
+                }
+            ],
+            "content": "大 4 52"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 121,
+                    "length": 7
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        162,
+                        285,
+                        267,
+                        285,
+                        267,
+                        345,
+                        162,
+                        345
+                    ]
+                }
+            ],
+            "content": "燃えない ごみ"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 129,
+                    "length": 6
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        70,
+                        311,
+                        101,
+                        311,
+                        101,
+                        317,
+                        70,
+                        317
+                    ]
+                }
+            ],
+            "content": "博客女专制止"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 136,
+                    "length": 1
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        777,
+                        319,
+                        801,
+                        319,
+                        801,
+                        343,
+                        778,
+                        344
+                    ]
+                }
+            ],
+            "content": "鉄"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 138,
+                    "length": 1
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        842,
+                        320,
+                        863,
+                        320,
+                        863,
+                        348,
+                        843,
+                        348
+                    ]
+                }
+            ],
+            "content": "3"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 140,
+                    "length": 5
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        458,
+                        369,
+                        524,
+                        369,
+                        524,
+                        388,
+                        458,
+                        388
+                    ]
+                }
+            ],
+            "content": "(不燃物)"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 146,
+                    "length": 5
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        752,
+                        371,
+                        867,
+                        372,
+                        867,
+                        401,
+                        752,
+                        401
+                    ]
+                }
+            ],
+            "content": "アルミ 4"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 152,
+                    "length": 17
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        26,
+                        432,
+                        101,
+                        417,
+                        106,
+                        442,
+                        31,
+                        457
+                    ]
+                }
+            ],
+            "content": "星材等重大之為對電費 300145"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 170,
+                    "length": 3
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        180,
+                        426,
+                        246,
+                        426,
+                        246,
+                        447,
+                        180,
+                        447
+                    ]
+                }
+            ],
+            "content": "申込制"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 174,
+                    "length": 6
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        403,
+                        412,
+                        537,
+                        411,
+                        537,
+                        436,
+                        403,
+                        437
+                    ]
+                }
+            ],
+            "content": "使えないもの"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 181,
+                    "length": 6
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        175,
+                        459,
+                        255,
+                        459,
+                        255,
+                        519,
+                        175,
+                        519
+                    ]
+                }
+            ],
+            "content": "粗 大 ごみ"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 188,
+                    "length": 5
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        624,
+                        441,
+                        689,
+                        441,
+                        689,
+                        460,
+                        624,
+                        460
+                    ]
+                }
+            ],
+            "content": "(可燃物)"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 194,
+                    "length": 4
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        948,
+                        430,
+                        973,
+                        430,
+                        973,
+                        529,
+                        949,
+                        529
+                    ]
+                }
+            ],
+            "content": "リュース"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 199,
+                    "length": 5
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        43,
+                        476,
+                        86,
+                        468,
+                        88,
+                        479,
+                        46,
+                        488
+                    ]
+                }
+            ],
+            "content": "500円0"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 205,
+                    "length": 1
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        842,
+                        490,
+                        864,
+                        490,
+                        864,
+                        518,
+                        842,
+                        518
+                    ]
+                }
+            ],
+            "content": "5"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 207,
+                    "length": 7
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        57,
+                        505,
+                        105,
+                        496,
+                        107,
+                        507,
+                        59,
+                        517
+                    ]
+                }
+            ],
+            "content": "1000/10"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 215,
+                    "length": 11
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        403,
+                        521,
+                        627,
+                        520,
+                        627,
+                        546,
+                        403,
+                        547
+                    ]
+                }
+            ],
+            "role": "sectionHeading",
+            "content": "使えるもの(家具など)"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 227,
+                    "length": 4
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        818,
+                        544,
+                        916,
+                        543,
+                        916,
+                        570,
+                        818,
+                        571
+                    ]
+                }
+            ],
+            "content": "無色 6"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 232,
+                    "length": 4
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        169,
+                        611,
+                        257,
+                        611,
+                        257,
+                        632,
+                        169,
+                        632
+                    ]
+                }
+            ],
+            "content": "定期収集"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 237,
+                    "length": 11
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        143,
+                        647,
+                        285,
+                        647,
+                        285,
+                        707,
+                        143,
+                        707
+                    ]
+                }
+            ],
+            "content": "空きびん ペットボトル"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 249,
+                    "length": 13
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        407,
+                        591,
+                        466,
+                        590,
+                        468,
+                        735,
+                        408,
+                        736
+                    ]
+                }
+            ],
+            "content": "選別処理施設 で選別·梱包"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 263,
+                    "length": 1
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        482,
+                        590,
+                        561,
+                        590,
+                        562,
+                        733,
+                        483,
+                        733
+                    ]
+                }
+            ],
+            "content": "「"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 265,
+                    "length": 1
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        697,
+                        539,
+                        778,
+                        538,
+                        779,
+                        680,
+                        697,
+                        680
+                    ]
+                }
+            ],
+            "content": "E"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 267,
+                    "length": 5
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        1006,
+                        449,
+                        1032,
+                        448,
+                        1032,
+                        617,
+                        1006,
+                        617
+                    ]
+                }
+            ],
+            "content": "リサイクル"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 273,
+                    "length": 2
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        605,
+                        597,
+                        653,
+                        597,
+                        653,
+                        620,
+                        605,
+                        620
+                    ]
+                }
+            ],
+            "content": "びん"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 276,
+                    "length": 2
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        817,
+                        594,
+                        866,
+                        594,
+                        866,
+                        619,
+                        817,
+                        619
+                    ]
+                }
+            ],
+            "content": "茶色"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 279,
+                    "length": 1
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        896,
+                        596,
+                        917,
+                        596,
+                        917,
+                        624,
+                        896,
+                        624
+                    ]
+                }
+            ],
+            "content": "7"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 281,
+                    "length": 10
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        63,
+                        637,
+                        117,
+                        637,
+                        117,
+                        644,
+                        63,
+                        644
+                    ]
+                }
+            ],
+            "content": "모양다시ペットボト刷"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 292,
+                    "length": 5
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        72,
+                        650,
+                        105,
+                        649,
+                        105,
+                        660,
+                        72,
+                        660
+                    ]
+                }
+            ],
+            "content": "大 45%"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 298,
+                    "length": 5
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        807,
+                        650,
+                        917,
+                        649,
+                        917,
+                        677,
+                        807,
+                        678
+                    ]
+                }
+            ],
+            "content": "その他 8"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 304,
+                    "length": 6
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        583,
+                        702,
+                        687,
+                        703,
+                        687,
+                        727,
+                        583,
+                        727
+                    ]
+                }
+            ],
+            "content": "ペットボトル"
+        },
+        {
+            "spans": [
+                {
+                    "offset": 311,
+                    "length": 1
+                }
+            ],
+            "boundingRegions": [
+                {
+                    "pageNumber": 1,
+                    "polygon": [
+                        896,
+                        704,
+                        915,
+                        703,
+                        916,
+                        727,
+                        897,
+                        728
+                    ]
+                }
+            ],
+            "content": "9"
+        }
+    ]
+}
+```
+注意：
+省略せずに完全な全体のフローを記述してください。
